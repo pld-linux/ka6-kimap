@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kimap
 Summary:	IMAP library
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d929bc4c476256ef03b4ae9c9c5c279d
+# Source0-md5:	e83246adaeff75ef4b7b83ebab936893
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -86,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6IMAP.so.*.*
+%{_libdir}/libKPim6IMAP.so.*.*
 %ghost %{_libdir}/libKPim6IMAP.so.6
 %{_datadir}/qlogging-categories6/kimap.categories
 %{_datadir}/qlogging-categories6/kimap.renamecategories
