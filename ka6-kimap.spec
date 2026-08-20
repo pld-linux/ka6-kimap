@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
-%define		kframever	5.94.0
+%define		kdeappsver	26.08.0
+%define		kframever	6.29.0
 %define		qtver		5.15.2
 %define		kaname		kimap
 Summary:	IMAP library
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	081ffb157b80ce020fce47c8938e591e
+# Source0-md5:	3b2f20201bf872261d1bc3455b9b63bc
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -20,11 +20,11 @@ BuildRequires:	Qt6Test-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	cyrus-sasl-devel
 BuildRequires:	gettext-devel
-BuildRequires:	ka6-kmime-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
 BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
 BuildRequires:	kf6-ki18n-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
+BuildRequires:	kf6-kmime-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
